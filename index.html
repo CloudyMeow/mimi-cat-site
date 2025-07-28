@@ -1,30 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mimi the Cat 🐱</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Album Mimi</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'SummerInJuly';
+      src: url('fonts/SummerInJuly.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'VintageVignette';
+      src: url('fonts/VintageVignette.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4ec;
+      color: #333;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'SummerInJuly', cursive;
+      font-size: 3rem;
+      margin-top: 1.5rem;
+      color: #4a6041;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin-top: 2rem;
+    }
+
+    .profile img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .info {
+      text-align: left;
+      max-width: 400px;
+    }
+
+    .info h2 {
+      font-family: 'VintageVignette', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #4a6041;
+    }
+
+    .info p {
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .button {
+      cursor: pointer;
+      position: relative;
+      padding: 10px 24px;
+      font-size: 18px;
+      color: rgb(193, 163, 98);
+      border: 2px solid rgb(193, 163, 98);
+      border-radius: 34px;
+      background-color: transparent;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: inherit;
+      scale: 0;
+      z-index: -1;
+      background-color: rgb(193, 163, 98);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .button:hover::before {
+      scale: 3;
+    }
+
+    .button:hover {
+      color: #212121;
+      scale: 1.1;
+      box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+    }
+
+    .button:active {
+      scale: 1;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🐾 Welcome to Mimi's World 🐾</h1>
-    <p>Hi! I'm Mimi. I'm a house cat who enjoys naps and balcony views.</p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="sleeping.html">Sleeping Pics</a> |
-      <a href="baby.html">Baby Mimi</a>
-    </nav>
+    <h1>Witamy w albumie Mimi</h1>
   </header>
 
-  <main>
-    <h2>✨ Featured Photo</h2>
-    <img src="images/mimi-cute.jpg" alt="Mimi looking cute" width="300" />
-    <p>This is me in my favorite nap position!</p>
-  </main>
+  <div class="container">
+    <div class="profile">
+      <img src="images/mimi-placeholder.jpg" alt="Zdjęcie Mimi" />
+      <div class="info">
+        <h2>O Mimi</h2>
+        <p><strong>Imię:</strong> Mimi</p>
+        <p><strong>Imię przy urodzeniu:</strong> Jamine</p>
+        <p><strong>Płeć:</strong> ♀</p>
+        <p><strong>Rasa:</strong> Scottish Fold (uszy do góry)</p>
+        <p><strong>Zawód:</strong> Bycie kulką puchu</p>
+        <p><strong>Miejsce zamieszkania:</strong> Dom + Balkon</p>
+        <p><strong>Lubi:</strong> Gryzienie kostek, eksploracje, spanie, pudełka, lekki deszcz, masło, przekąski, grzechoczącą zabawkę</p>
+        <p><strong>Nie lubi:</strong> Gdy ktoś wychodzi, odkurzacza, zbyt wielu gości, weterynarza, jazdy samochodem</p>
+        <p><strong>Data urodzenia:</strong> 2 września 2020</p>
+        <p><strong>Data adopcji:</strong> 6 grudnia 2020</p>
+        <p><strong>Kocia rodzina:</strong> Dwie siostry: Bella i Mulan... i pewnie więcej</p>
+        <p><strong>Ludzka rodzina:</strong> Cecylia, Marceli, Joanna i Krzysztof</p>
+      </div>
+    </div>
 
-  <footer>
-    <p>Made with ❤️ by my human</p>
-  </footer>
+    <div class="buttons">
+      <a href="timeline.html" class="button">Oś czasu</a>
+      <a href="future.html" class="button">Karty przyszłości</a>
+      <a href="baby.html" class="button">Mała Mimi</a>
+      <a href="sleep.html" class="button">Czas na spanie</a>
+      <a href="videos.html" class="button">Wideo</a>
+      <a href="other.html" class="button">Inne</a>
+    </div>
+  </div>
 </body>
 </html>
